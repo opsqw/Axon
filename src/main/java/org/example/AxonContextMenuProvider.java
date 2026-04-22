@@ -150,26 +150,24 @@ public class AxonContextMenuProvider implements ContextMenuItemsProvider {
         }
 
         // --- Paste cURL to Repeater ---
-        if (event.isFromTool(ToolType.REPEATER) || event.isFromTool(ToolType.INTRUDER)) {
-            JMenuItem pasteCurlItem = new JMenuItem(I18n.pasteCurlToRepeater());
-            pasteCurlItem.addActionListener(e -> {
-                try {
-                    String clipboardData = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
-                    if (clipboardData != null && !clipboardData.isEmpty()) {
-                        try {
-                            HttpRequest request = CurlParser.parse(clipboardData);
-                            api.repeater().sendToRepeater(request, "cURL Request");
-                        } catch (Exception ex) {
-                            api.logging().logToError("Parsing error: " + ex.getMessage());
-                            JOptionPane.showMessageDialog(null, I18n.errorParseCurl() + ": " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                        }
+        JMenuItem pasteCurlItem = new JMenuItem(I18n.pasteCurlToRepeater());
+        pasteCurlItem.addActionListener(e -> {
+            try {
+                String clipboardData = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+                if (clipboardData != null && !clipboardData.isEmpty()) {
+                    try {
+                        HttpRequest request = CurlParser.parse(clipboardData);
+                        api.repeater().sendToRepeater(request, "cURL Request");
+                    } catch (Exception ex) {
+                        api.logging().logToError("Parsing error: " + ex.getMessage());
+                        JOptionPane.showMessageDialog(null, I18n.errorParseCurl() + ": " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, I18n.errorReadClipboard(), "Error", JOptionPane.ERROR_MESSAGE);
                 }
-            });
-            axonMenu.add(pasteCurlItem);
-        }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, I18n.errorReadClipboard(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        axonMenu.add(pasteCurlItem);
 
         menuItems.add(axonMenu);
         return menuItems;
@@ -230,12 +228,16 @@ public class AxonContextMenuProvider implements ContextMenuItemsProvider {
             runButton.addActionListener(e -> {
                 String cmd = commandArea.getText();
                 String dir = dirField.getText();
-                try {
-                    CommandExecutor.executeCommand(cmd, dir);
-                    dialog.dispose();
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(dialog, "Error running command: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                }
+                dialog.dispose();
+                new Thread(() -> {
+                    try {
+                        CommandExecutor.executeCommand(cmd, dir);
+                    } catch (Exception ex) {
+                        SwingUtilities.invokeLater(() -> {
+                            JOptionPane.showMessageDialog(null, "Error running command: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                        });
+                    }
+                }).start();
             });
             
             copyButton.addActionListener(e -> {

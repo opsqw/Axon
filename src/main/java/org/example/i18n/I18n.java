@@ -292,7 +292,7 @@ public class I18n {
     }
     
     public static String pasteCurlToRepeater() {
-        return IS_CHINESE ? "粘贴 cURL 到 Repeater" : "Paste cURL to Repeater";
+        return IS_CHINESE ? "粘贴 cURL (bash) 到 Repeater" : "Paste cURL (bash) to Repeater";
     }
     
     public static String errorReadClipboard() {
