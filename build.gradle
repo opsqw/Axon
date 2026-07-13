@@ -34,7 +34,7 @@ jar {
         attributes(
             'Implementation-Version': version,
             'Implementation-Title': 'Axon',
-            'Implementation-Vendor': 'tldrw'
+            'Implementation-Vendor': 'opsqw'
         )
     }
 }

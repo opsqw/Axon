@@ -26,8 +26,8 @@ public class AxonExtension implements BurpExtension {
                 "\n" +
                 "Language: " + language + "\n" +
                 "Version: " + version + "\n" +
-                "Author: tldrw\n" +
-                "GitHub: https://github.com/tldrw/Axon\n" +
+                "Author: opsqw\n" +
+                "GitHub: https://github.com/opsqw/Axon\n" +
                 "\n" +
                 "Happy Hunting!\n";
         api.logging().logToOutput(banner);

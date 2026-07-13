@@ -5,22 +5,22 @@
 
 <p>
   <a href="https://mit-license.org/">
-    <img src="https://img.shields.io/github/license/tldrw/Axon?style=flat" alt="License">
+    <img src="https://img.shields.io/github/license/opsqw/Axon?style=flat" alt="License">
   </a>
-  <a href="https://github.com/tldrw/Axon">
-    <img src="https://img.shields.io/github/stars/tldrw/Axon?style=flat" alt="Stars">
+  <a href="https://github.com/opsqw/Axon">
+    <img src="https://img.shields.io/github/stars/opsqw/Axon?style=flat" alt="Stars">
   </a>
-  <a href="https://github.com/tldrw/Axon">
-    <img src="https://img.shields.io/github/forks/tldrw/Axon?style=flat" alt="Forks">
+  <a href="https://github.com/opsqw/Axon">
+    <img src="https://img.shields.io/github/forks/opsqw/Axon?style=flat" alt="Forks">
   </a>
-  <a href="https://github.com/tldrw/Axon/releases">
-    <img src="https://img.shields.io/github/v/release/tldrw/Axon?sort=semver" alt="Release">
+  <a href="https://github.com/opsqw/Axon/releases">
+    <img src="https://img.shields.io/github/v/release/opsqw/Axon?sort=semver" alt="Release">
   </a>
 </p>
 
 <div>
 
-English ｜ [中文](README_CN.md)
+English ｜ [简体中文](README_zh-CN.md)
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Direct HTTP request format conversion (no preview window, preserves complete req
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/tldrw/Axon.git
+git clone https://github.com/opsqw/Axon.git
 cd Axon
 ```
 
@@ -125,7 +125,7 @@ cd Axon
 
 ### Method 2: Direct Download
 
-Download the latest JAR file from the [Releases](https://github.com/tldrw/Axon/releases) page, then load it in Burp Suite.
+Download the latest JAR file from the [Releases](https://github.com/opsqw/Axon/releases) page, then load it in Burp Suite.
 
 ## 🚀 Usage
 
@@ -178,7 +178,7 @@ UTF-8 encoded: \xe6\x88\x90\xe5\x8a\x9f
 
 Use the encoded hexadecimal value in Burp Suite Proxy's search box or Intruder's Grep-Match to match Chinese content.
 
-**For detailed usage, please refer to**: [Burp Suite Tips](https://tldrw.github.io/tips-burpsuite)
+**For detailed usage, please refer to**: [Burp Suite Tips](https://opsqw.github.io/tips-burpsuite)
 
 ### Scenario 2: Unicode Encoding (JSON Values) - Bypass WAF JSON Filtering
 
@@ -275,6 +275,6 @@ This project is licensed under the [MIT License](./LICENSE).
 
 <div align="center">
 
-Made with ❤️ by [tldrw](https://github.com/tldrw)
+Made with ❤️ by [opsqw](https://github.com/opsqw)
 
 </div>

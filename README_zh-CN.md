@@ -5,22 +5,22 @@
 
 <p>
   <a href="https://mit-license.org/">
-    <img src="https://img.shields.io/github/license/tldrw/Axon?style=flat" alt="License">
+    <img src="https://img.shields.io/github/license/opsqw/Axon?style=flat" alt="License">
   </a>
-  <a href="https://github.com/tldrw/Axon">
-    <img src="https://img.shields.io/github/stars/tldrw/Axon?style=flat" alt="Stars">
+  <a href="https://github.com/opsqw/Axon">
+    <img src="https://img.shields.io/github/stars/opsqw/Axon?style=flat" alt="Stars">
   </a>
-  <a href="https://github.com/tldrw/Axon">
-    <img src="https://img.shields.io/github/forks/tldrw/Axon?style=flat" alt="Forks">
+  <a href="https://github.com/opsqw/Axon">
+    <img src="https://img.shields.io/github/forks/opsqw/Axon?style=flat" alt="Forks">
   </a>
-  <a href="https://github.com/tldrw/Axon/releases">
-    <img src="https://img.shields.io/github/v/release/tldrw/Axon?sort=semver" alt="Release">
+  <a href="https://github.com/opsqw/Axon/releases">
+    <img src="https://img.shields.io/github/v/release/opsqw/Axon?sort=semver" alt="Release">
   </a>
 </p>
 
 <div>
 
-中文 ｜ [English](README_EN.md)
+English(README.md) ｜ 简体中文
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Axon 是一个功能强大的 Burp Suite 扩展插件，提供了丰富的编码
 
 1. **克隆项目**
 ```bash
-git clone https://github.com/tldrw/Axon.git
+git clone https://github.com/opsqw/Axon.git
 cd Axon
 ```
 
@@ -125,7 +125,7 @@ cd Axon
 
 ### 方法二：直接下载
 
-从 [Releases](https://github.com/tldrw/Axon/releases) 页面下载最新版本的 JAR 文件，然后在 Burp Suite 中加载。
+从 [Releases](https://github.com/opsqw/Axon/releases) 页面下载最新版本的 JAR 文件，然后在 Burp Suite 中加载。
 
 ## 🚀 使用方法
 
@@ -178,7 +178,7 @@ UTF-8 编码: \xe6\x88\x90\xe5\x8a\x9f
 
 在 Burp Suite Proxy 的搜索框或 Intruder 的 Grep-Match 中使用编码后的十六进制值即可匹配中文内容。
 
-**详细用法请参考**: [Burp Suite 使用技巧](https://tldrw.github.io/tips-burpsuite)
+**详细用法请参考**: [Burp Suite 使用技巧](https://opsqw.github.io/tips-burpsuite)
 
 ### 场景 2: Unicode 编码（JSON键值编码）- 绕过 WAF JSON 过滤
 
@@ -277,6 +277,6 @@ Axon/
 
 <div align="center">
 
-Made with ❤️ by [tldrw](https://github.com/tldrw)
+Made with ❤️ by [opsqw](https://github.com/opsqw)
 
 </div>
